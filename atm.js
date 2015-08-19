@@ -21,7 +21,6 @@ var currentNewBalance = 0;
     console.log("You've got cash!"); 
   });
 
-
 //Savings Account -- deposit
 
  $('#deposit2').on('click', function(e){ 
@@ -45,8 +44,7 @@ $('#withdraw1').on('click', function(e){
     console.log("Buy something nice!"); 
   });
 
-
-// //Savings Account -- withdraw
+//Savings Account -- withdraw
 
 $('#withdraw2').on('click', function(e){ 
     savingsNewBalance = savingsStartBalance - parseInt($('#amount2').val());
@@ -57,17 +55,8 @@ $('#withdraw2').on('click', function(e){
     console.log("Keep some for later!"); 
   });
 
-//   if (#amount1 === Nan) || if (#amount2 === NaN) {
-//     $ "Please enter valid numbers"; //print to the right class or id
-//     };
 
-//   if (currentNewBalance === 0) {
-//     $('#balance1').css('background', 'red');
-//   };
-
-//   if (savingsNewBalance === 0) {
-//     $('#balance2').css('background', 'red');
-//   };
+  
 
 // //try to take too much from current
 
@@ -80,5 +69,19 @@ $('#withdraw2').on('click', function(e){
 //   if ($('amount1').click.val() > currentNewBalance) && ($('amount1').click.val() > savingsNewBalance) {
 //     $('.clear', 'The balance in both account is too low.')
 //   };
+
+//|| or && throwing an error; not required in brief so leaving out
+
+  //  if ($('#amount1') === NaN) || if ($('#amount2') === NaN) { 
+  //    $ "Please enter valid numbers"; //print to the right class or id
+  //    };
+
+  if (currentNewBalance === 0) {
+    $('#balance1').css('background', 'red');
+  };
+
+  if (savingsNewBalance === 0) {
+    $('#balance2').css('background', 'red');
+  };
 
  })
