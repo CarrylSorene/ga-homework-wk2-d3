@@ -37,11 +37,10 @@ var currentNewBalance = 0;
 //Current Account -- withdraw
 
 $('#withdraw1').on('click', function(e){ 
-    currentNewBalance = parseInt($('#amount1').val());
+    currentNewBalance = currentStartBalance - parseInt($('#amount1').val());
     console.log(currentNewBalance)
     $('#balance1').text(currentNewBalance);
-    currentStartBalance = currentNewBalance - currentStartBalance;
-    $('#balance1').text('$' + currentStartBalance);
+    $('#balance1').text('$' + currentNewBalance);
     console.log(currentNewBalance);
     console.log("Buy something nice!"); 
   });
@@ -50,12 +49,11 @@ $('#withdraw1').on('click', function(e){
 // //Savings Account -- withdraw
 
 $('#withdraw2').on('click', function(e){ 
-    currentNewBalance = parseInt($('#amount2').val());
-    console.log(currentNewBalance)
-    $('#balance2').text(currentNewBalance);
-    currentStartBalance = currentNewBalance - ;
-    $('#balance2').text('$' + currentStartBalance);
-    console.log(currentNewBalance);
+    savingsNewBalance = savingsStartBalance - parseInt($('#amount2').val());
+    console.log(savingsNewBalance)
+    $('#balance2').text(savingsNewBalance);
+    $('#balance2').text('$' + savingsNewBalance);
+    console.log(savingsNewBalance);
     console.log("Keep some for later!"); 
   });
 
